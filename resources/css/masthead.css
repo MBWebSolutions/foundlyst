@@ -1,0 +1,9 @@
+.masthead {
+    /* min-height: 589px; */
+
+    min-height: 100px;
+    background-image: url(/public/img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: contain; */
+}

@@ -1,0 +1,86 @@
+.register-body {
+    background-color: var(--green3);
+    border-radius: 50px;
+    margin: 50px auto;
+    padding: 30px;
+    
+}
+
+.register-title {
+    font-family: var(--text);
+    font-size: 28px;
+    color: var(--yellow3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.271);
+}
+
+.register-text {
+    font-family: var(--text);
+    font-weight: 600;
+    font-size: 25px;
+    color: #3e6063;
+}
+
+.register-btn {
+    background-color: var(--yellow3);
+    color: var(--green1);
+    border-radius: 40px;
+    font-family: var(--text-title);
+    font-weight: 600;
+    font-size: 25px;
+    border: none;
+    padding: 10px 20px;
+    background-image: linear-gradient(
+        to top,
+        var(--green3) 50%,
+        transparent 50%
+    );
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+}
+
+.register-btn:hover {
+    color: var(--yellow3);
+    background-position: 0% 100%;
+}
+
+.create-img {
+    border-radius: 50px;
+    height: 800px;
+    width: 800px;
+    /* margin-top: 17%; */
+}
+
+.register-img {
+    border-radius: 50px;
+}
+.register-btn-modal {
+    background-color: var(--yellow3);
+    color: var(--green1);
+    border-radius: 40px;
+    font-family: var(--text-title);
+    font-weight: 600;
+    font-size: 20px;
+    border: 30px, solid;
+
+    margin-left: 30px;
+}
+
+.revisor-btn {
+    background-color: var(--green1);
+    color: var(--yellow3);
+    border-radius: 40px;
+    font-family: var(--text-title);
+    font-weight: 600;
+    font-size: 25px;
+    border: none;
+    padding: 10px;
+}
+
+.revisor-btn:hover {
+    color: var(--green1);
+}
+
+
+.text-area-homemade{
+  height: 9vh !important;
+}

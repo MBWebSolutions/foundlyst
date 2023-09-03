@@ -1,0 +1,50 @@
+.footer{
+ 
+    background-color: var(--green1);
+    font-family: var(--text);
+    /* height: 300px; */
+
+}
+
+.brackpoint_color{
+    color: black;
+    font-family: var(--title-text);
+   text-decoration: none;
+}
+
+
+
+
+.linkFooter{
+    color: black;
+     font-family: var(--title-text);
+    text-decoration: none;
+
+    }
+.infoBootstrap{
+    color: var(--green0);
+    font-family: var(--title-text);
+    text-decoration: none;
+   
+
+}
+
+/* p{
+    font-size: 25px;
+}
+
+a{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 40px;
+} */
+
+#marginCard{
+
+    margin-bottom: 50px;
+}
+.cristo{
+    /* height: 250px; */
+}

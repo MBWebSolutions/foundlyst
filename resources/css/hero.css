@@ -1,0 +1,210 @@
+.img {
+    height: 65vh;
+    min-height: 300px;
+    width: 100%;
+    background-image: url(/public/img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.imgmobile{
+    height: 130px;
+}
+
+.text-post {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    /* color: #507e82; */
+    color: var(--green1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button-post {
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    background: var(--green2);
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 6px 0;
+    color: var(--yellow3);
+    transition: all 1s;
+}
+
+.button-post:hover {
+    background-color: var(--green1);
+    color:var(--yellow2);
+}
+
+.post {
+    border-radius: 20px;
+    max-width: 400px;
+    margin-top: 45px;
+    margin-left: 53px;
+    padding: 30px;
+    background: var(--yellow2);
+}
+
+
+.hero-title {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 74px;
+    color: var(--green1);
+}
+.section3 {
+    width: 60vh;
+}
+.h-sectionCard {
+    height: 70vh;
+}
+
+
+.pulse {
+    -webkit-animation: pulse 1.5s infinite;
+}
+  
+.pulse-button:hover {
+    -webkit-animation: none; 
+}
+
+@-webkit-keyframes pulse {
+    0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    }
+    50% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+    }
+    100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+    }
+}
+
+
+.about-us{
+    font-family: var(--title-text);
+}
+
+.paragrafo{
+    padding: 2rem;
+    background-color: var(--green2);
+    color: var(--yellow2);
+    padding-top: 5rem;
+    font-family: var(--text);
+    font-size: 20px;
+}
+
+.contatti{
+    font-family: var(--title-text);
+}
+
+
+.fa-brands{
+    color: var(--green2);
+    font-size: 4rem;
+}
+
+.rowicon{
+    margin-bottom: 13rem;
+}
+
+.dropdown-menu{
+    background-color: none;
+}
+
+.team-container{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+
+.team{
+    font-family: var(--title-text);
+}
+
+.team-box {
+    font-family: var(--text);
+    color: var(--green1);
+    font-size: 1rem;
+
+  }
+
+  .img-round {
+    border: 5px solid #ececec;
+    outline: 2px solid var(--green1);
+    border-image-outset: 50px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .nome{
+    font-weight: 700;
+    font-size: 23px;
+}
+
+
+.link{
+    text-decoration: none;
+    color: var(--green1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.link:hover{
+    color: var(--green3);
+    text-decoration: none;
+}
+
+
+.lavora{
+    font-family: var(--title-text);
+    color: var(--green0);
+}
+
+.lavoratext{
+    font-family: var(--text);
+    color: var(--green0);
+}
+
+
+.btnlavora{
+    background-color: var(--yellow2);
+    color: var(--green2);
+    text-align: center;
+    font-weight: 500;
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 20px;
+}
+
+.btnlavora:hover{
+    background-color: var(--green3);
+    color: var(--yellow2);
+}
+
+
+.lavora-con-noi{
+    background-color: var(--green2);
+    margin-bottom: 0%;
+}
+  

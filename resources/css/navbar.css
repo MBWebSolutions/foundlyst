@@ -1,0 +1,87 @@
+.color {
+    background-color: var(--green1);
+    color: var(--green1);
+}
+
+.logo-small {
+    color: var(--yellow2);
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: "Fjalla One", sans-serif;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+
+.home-nav {
+    font-size: 39px;
+    color: var(--yellow3) !important;
+    font-family: var(--title-text);
+    font-weight: 700;
+}
+
+.search-categories {
+    background-color: var(--yellow2);
+}
+
+.searchbar {
+    height: 4vh;
+    margin-top: 10px;
+}
+
+.searchbar-btn {
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 4vh;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: var(--green2);
+    background-color: var(--yellow3);
+    transition: all 0.3s;
+}
+
+.searchbar-btn:hover {    
+    color: var(--yellow3);
+    background-color: var(--green2);
+}
+
+
+.login-btn {
+    color: var(--yellow2);
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.icon-color {
+    color: var(--green0);
+}
+
+
+.icon-nav{
+    font-size: 40px;
+}
+.icon_before{
+    font-size: 13px;
+}
+.color2{
+    background-color: var(--green2); 
+
+}
+
+.impo{
+    padding-top: 12px;
+}
+
+
+.img-nav{
+    width: 5rem;
+}
+
+.category-nav{
+    background-color: var(--green2);
+    
+}

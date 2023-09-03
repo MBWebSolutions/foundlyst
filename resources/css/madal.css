@@ -1,0 +1,11 @@
+.modal-color{
+    background-color: var(--green3);
+}
+.modal-text{
+    color: var(--yellow3);
+    font-family: var(--text-title);
+}
+.caunt{
+    
+  margin-left: 100px !important;
+}

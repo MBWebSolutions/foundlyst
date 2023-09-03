@@ -1,0 +1,21 @@
+.tabela{
+width: 100%;
+background-color: var(--green1);
+
+}
+
+.n-annunci{
+    background-color: var(--green1);
+    color: var(--yellow3);
+    margin-left: 1rem;
+}
+
+.title-index{
+    color: var(--green1);
+    
+}
+
+.titolo-tabella{
+    color: var(--green0);
+    text-align: center;
+}

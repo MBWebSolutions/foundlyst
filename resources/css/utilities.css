@@ -1,0 +1,24 @@
+:root {
+    /* verdi */
+    --green0: #1c2a2c;
+    --green1: #507e82;
+    --green2: #61a6ab;
+    --green3: #7bd0d6;
+    /* gialli */
+    --yellow1: #dbdbcf;
+    --yellow2: #f6f6e9;
+    --yellow3: #fdfdd9;
+    /* grigi */
+    --blak1: #000000;
+    --blak2: #a3a3a3;
+    --blak3: #d9d9d9;
+
+    --yellow: #fdfdd9;
+    --dark: #0e2e50;
+    --title-text: "Fjalla One", sans-serif;
+    --text: "Nunito", sans-serif;
+}
+.light-mode {
+    background-color: var(--yellow3);
+    color: var(--green1);
+}
