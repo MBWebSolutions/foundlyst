@@ -1,24 +1,53 @@
 :root {
-    /* verdi */
-    --green0: #1c2a2c;
-    --green1: #507e82;
-    --green2: #61a6ab;
-    --green3: #7bd0d6;
-    /* gialli */
-    --yellow1: #dbdbcf;
-    --yellow2: #f6f6e9;
-    --yellow3: #fdfdd9;
-    /* grigi */
-    --blak1: #000000;
-    --blak2: #a3a3a3;
-    --blak3: #d9d9d9;
+    --violet: #AA9EFF;
+    --violet-d: #8C7FF0;
+    --lite-d: #ECEFF7;
+    --lite: #ffffff;
+    --grey: #9496A1;
 
-    --yellow: #fdfdd9;
-    --dark: #0e2e50;
-    --title-text: "Fjalla One", sans-serif;
-    --text: "Nunito", sans-serif;
 }
-.light-mode {
-    background-color: var(--yellow3);
-    color: var(--green1);
+.f-lato{
+font-family: 'Lato';
+}
+.f-Bungee{
+    font-family: Bungee;
+}
+.bg-violet{
+    background-color: var(--violet) !important;
+}
+.c-violet{
+    color: var(--violet)!important;
+
+}
+.bg-violet-d{
+    background-color: var(--violet-d)!important;
+}
+.c-violet-d{
+    color: var(--violet-d)!important;
+
+}
+.bg-lite{
+    background-color: var(--lite)!important;
+}
+.c-lite{
+    color: var(--lite)!important;
+
+}
+.bg-lite-d{
+    background-color: var(--lite-d)!important;
+}
+.c-lite-d{
+    color: var(--lite-d)!important;
+
+}
+.bg-grey{
+    background-color: var(--grey)!important;
+}
+.c-grey{
+    color: var(--grey)!important;
+
+}
+
+.fws-1{
+    font-size: 1vw;
 }
