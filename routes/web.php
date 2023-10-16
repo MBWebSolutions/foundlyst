@@ -17,57 +17,44 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 // Home/Welcome
-Route::get('/',[FrontController::class,'welcome'])->name('welcome');
+Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 // Show Category
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
 
-// Annunci
-Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
-// Dettaglio annuncio
-
-Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
-
-// Index articoli
-
-Route::get('tutti/annunci',[AnnouncementController::class,'indexAnnouncement'])->name('announcements.index');
-
-// REVISOR INDEX
-
-Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
-
-// ACCETTA ANNUNCIO 
-
-Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
-
-// RIFIUTA ANNUNNCIO 
-
-Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
-
-// RICHIEDI REVISOR
-
-Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
-
-// CREA REVISOR
-
-Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
-
-// RICERCA ARTICOLI
-
-Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
-
 // CAMBIO LINGUA
-
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('set_language_locale');
 
-//tabela
+Route::prefix('announcement')->group(function () {
+    // Index articoli
+    Route::get('/index', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+    // Dettaglio annuncio
+    Route::get('/show/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+    // RICERCA ARTICOLI
+    Route::get('/search', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
+});
 
-Route::get('/tabela/annuncio', [RevisorController::class, 'tabelaAnnouncements'])->middleware('isRevisor')->name('announcements.table');
+Route::middleware(['auth'])->groupgroup(function () {
 
-// accete tabela
+    // Annunci
+    Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
 
-Route::patch('/accetta/tabela/{announcement}', [RevisorController::class, 'acceptTabela'])->middleware('isRevisor')->name('revisorAccept.tabela');
 
-// rifiuta tabela
+    Route::prefix('revisor')->group(function () {
+        // RICHIEDI REVISOR
+        Route::get('/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+        // CREA REVISOR
+        Route::get('/create/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+        // REVISOR INDEX
+        Route::get('/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+    });
 
-Route::patch('/rifiuta/tabela/{announcement}', [RevisorController::class, 'rejectTabela'])->middleware('isRevisor')->name('revisorReject.tabela');
+    // ACCETTA ANNUNCIO 
+    Route::patch('/accept/announcement/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
+    // RIFIUTA ANNUNNCIO 
+    Route::patch('/rejects/announcement/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 
+
+    Route::patch('/accept/table/{announcement}', [RevisorController::class, 'acceptTabela'])->middleware('isRevisor')->name('revisorAccept.tabela');
+    Route::patch('/reject/table/{announcement}', [RevisorController::class, 'rejectTabela'])->middleware('isRevisor')->name('revisorReject.tabela');
+    Route::get('/table/announcement', [RevisorController::class, 'tabelaAnnouncements'])->middleware('isRevisor')->name('announcements.table');
+});
