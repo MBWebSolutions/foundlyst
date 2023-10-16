@@ -12,8 +12,9 @@ class FrontController extends Controller
     {
         // $announcements=Announcement::take(6)->get()->sortByDesc('created_at');
         $announcements = Announcement::where('is_accepted', true)->orderBy('created_at')->get();
+        $headerAnnouncements = Announcement::where('is_accepted', true)->orderBy('views', 'DESC')->first();
 
-        return view('welcome', compact('announcements'));
+        return view('welcome', compact('announcements', 'headerAnnouncements'));
     }
 
     public function categoryShow(Category $category)
