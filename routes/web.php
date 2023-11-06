@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\ReviewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,14 @@ Route::middleware(['auth'])->groupgroup(function () {
         Route::get('/create/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
         // REVISOR INDEX
         Route::get('/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+    });
+    
+    Route::prefix('review')->group(function () {
+        
+        Route::get('/index', [ReviewsController::class, 'index'])->name('review.index');
+        Route::get('/store', [ReviewsController::class, 'store']);
+        Route::get('/delete/{id}', [ReviewsController::class, 'delete']);
+        Route::get('/show/{id}', [ReviewsController::class, 'show']);
     });
 
     // ACCETTA ANNUNCIO 
